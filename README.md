@@ -1,115 +1,108 @@
-# 🛠️ Cross-Architecture Build Automation
+# 🚀 Cross-Architecture C Build Automation
+
+**(x86, ARMv7, RISC-V | C, Bash, GNU Toolchains, QEMU)**
+
+---
 
 ## 📌 Overview
 
-This project automates the process of building C applications for **multiple architectures** using scripts and structured build workflows.
+This project demonstrates cross-compilation of a portable C application across **x86, ARMv7, and RISC-V architectures**. It automates the build process and validates execution using **QEMU emulation**, highlighting key embedded systems concepts like toolchains and architecture portability.
 
-It demonstrates how to manage compilation, organization, and execution across different target environments efficiently.
+---
+
+## 📁 Project Structure
+
+```
+├── build/        # Compiled binaries for each architecture
+├── scripts/      # Build automation scripts (Bash)
+├── src/          # Source code (C files)
+└── README.md
+```
 
 ---
 
 ## ⚙️ Features
 
-* Automated build process using scripts
-* Cross-architecture compilation support
-* Organized project structure
-* Scalable build system design
+* Multi-architecture compilation (x86, ARMv7, RISC-V)
+* Automated build workflow using Bash scripts
+* Execution of cross-compiled binaries using QEMU
+* Analysis of architecture-level and instruction-level differences
 
 ---
 
-## 📂 Project Structure
+## 🛠️ Technologies Used
 
-* `src/` → Source code files (`test_app.c`)
-* `build/` → Compiled binaries and outputs
-* `scripts/` → Build automation scripts
-* `test_app` → Compiled executable
-* `README.md` → Project documentation
-
----
-
-## 🧠 Concepts Used
-
-* Cross-compilation
-* Build automation
-* Shell scripting
-* GCC toolchain
-* Software project structuring
+* C Programming
+* Bash Scripting
+* GNU Toolchains
+* QEMU Emulator
 
 ---
 
-## 🚀 How to Run
+## 🚀 Getting Started
 
-### 1️⃣ Navigate to Project Directory
+### 1. Clone the Repository
 
-```bash id="n1v82x"
-cd arch-build-automation
+```bash
+git clone https://github.com/your-username/cross-arch-build.git
+cd cross-arch-build
 ```
 
-### 2️⃣ Run Build Script
+### 2. Run Build Script
 
-```bash id="x9a12k"
-bash scripts/build.sh
+```bash
+chmod +x scripts/build.sh
+./scripts/build.sh
 ```
 
-### 3️⃣ Execute Program
+### 3. Execute Binaries
 
-```bash id="z7m2qp"
-./build/test_app
+#### x86 (Native)
+
+```bash
+./build/x86/app
+```
+
+#### ARM (QEMU)
+
+```bash
+qemu-arm ./build/arm/app
+```
+
+#### RISC-V (QEMU)
+
+```bash
+qemu-riscv64 ./build/riscv/app
 ```
 
 ---
 
-## ⚡ How It Works
+## 🔍 Key Learnings
 
-1. Source code is stored in `src/`
-2. Build scripts compile the code
-3. Output binaries are stored in `build/`
-4. Supports easy extension for multiple architectures
-
----
-
-## 📊 Output
-
-* Compiled executable in `build/`
-* Automated build workflow
-* Clean and reusable project structure
+* Cross-compilation using GNU toolchains
+* Embedded architecture targeting (ARM, RISC-V)
+* Handling portability and linking issues
+* Using QEMU for multi-architecture testing
 
 ---
 
-## 🎯 Applications
+## ⚡ Challenges
 
-* Embedded systems development
-* Cross-platform software builds
-* CI/CD pipelines
-* Firmware development workflows
-
----
-
-## 💡 Key Learning
-
-* Managing multi-architecture builds
-* Automating repetitive development tasks
-* Structuring scalable software projects
-* Using scripts for productivity
+* Resolving cross-architecture linking errors
+* Managing toolchain configurations
+* Understanding instruction-level differences
 
 ---
 
-## 🔮 Future Improvements
+## 📈 Future Enhancements
 
-* Add support for ARM cross-compilation
-* Integrate Docker for environment consistency
-* Add Makefile/CMake support
-* CI/CD integration (GitHub Actions)
+* Add ARM64 support
+* Integrate Makefile or CMake
+* Benchmark performance across architectures
+* Deploy on real embedded hardware
 
 ---
 
 ## 👩‍💻 Author
 
-Varshini Endrakanti
-B.Tech ECE
-
----
-
-## ⭐ Note
-
-This project focuses on automation and scalability of build systems rather than complex application logic.
+**Varshini Endrakanti**
